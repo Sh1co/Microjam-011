@@ -6,4 +6,6 @@ public class GlobalController : MonoBehaviour
 {
     public float slowedTimeScale = .1f;
     public bool slowMoActive = false;
+    public bool gamePaused = false;
+
 }
