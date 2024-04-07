@@ -31,7 +31,7 @@ public class BookUI : MonoBehaviour
             bookHUD.SetActive(!bookHUD.activeSelf);
             _gc.gamePaused = !_gc.gamePaused;
 
-            if (_gc.gamePaused) Time.timeScale = 0.001f;
+            if (_gc.gamePaused) Time.timeScale = 0f;
             else Time.timeScale = 1;
 
         }
