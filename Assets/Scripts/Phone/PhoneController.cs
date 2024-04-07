@@ -5,7 +5,7 @@ public class PhoneController : MonoBehaviour
 {
     public static bool phoneActive = false;
     public int maxBattery = 4;
-    public int currentBattery = 0;
+    public static int currentBattery = 0;
     public float slowMoDuration = 15f;
     public float currentSlowMoProgress = 0f;
     [SerializeField] private string batteryTag = "Battery";
