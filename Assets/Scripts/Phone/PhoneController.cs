@@ -20,7 +20,10 @@ public class PhoneController : MonoBehaviour
         {
             _gc = theObject.GetComponent<GlobalController>();
         }
-
+        
+        phoneActive = _gc.startWithPhone;
+        currentBattery = _gc.initCharge;
+        
         _camera = transform.parent.GetComponent<Camera>();
 
         if (phoneActive)
