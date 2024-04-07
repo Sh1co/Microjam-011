@@ -52,6 +52,7 @@ public class PhoneController : MonoBehaviour
 
     private void CheckMouseClick()
     {
+        if (_gc.slowMoActive) return;
         if (Input.GetMouseButtonDown(0))
         {
             if (currentBattery > 0)
