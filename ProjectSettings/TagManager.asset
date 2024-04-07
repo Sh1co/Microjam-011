@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Phone
   - Battery
+  - GroundPhone
   layers:
   - Default
   - TransparentFX

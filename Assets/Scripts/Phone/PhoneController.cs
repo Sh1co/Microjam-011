@@ -10,6 +10,8 @@ public class PhoneController : MonoBehaviour
     public float currentSlowMoProgress = 0f;
     [SerializeField] private string batteryTag = "Battery";
     [SerializeField] private string phoneTag = "Phone";
+    [SerializeField] private GameObject phone;
+    [SerializeField] private GameObject holder;
 
     private void Start()
     {
@@ -23,7 +25,13 @@ public class PhoneController : MonoBehaviour
 
         if (phoneActive)
         {
-            
+            phone.SetActive(true);
+            holder.SetActive(true);
+        }
+        else
+        {
+            phone.SetActive(false);
+            holder.SetActive(false);
         }
     }
 
@@ -102,10 +110,12 @@ public class PhoneController : MonoBehaviour
         
         if(!Physics.Raycast(ray, out hit,Mathf.Infinity))return;
 
-        if (!hit.collider.CompareTag(batteryTag)) return;
+        if (!hit.collider.CompareTag(phoneTag)) return;
 
         Destroy(hit.collider.gameObject);
         phoneActive = true;
+        phone.SetActive(true);
+        holder.SetActive(true);
     }
     
     private GlobalController _gc;

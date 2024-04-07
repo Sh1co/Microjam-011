@@ -382,6 +382,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5278166820608330550, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
         type: 3}
       propertyPath: m_Name
@@ -392,6 +397,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Phone
       objectReference: {fileID: 0}
+    - target: {fileID: 4368945633792932098, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -401,6 +411,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2355165820768659040}
   m_SourcePrefab: {fileID: 100100000, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600, type: 3}
+--- !u!1 &25498109067006341 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4368945633792932098, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
+    type: 3}
+  m_PrefabInstance: {fileID: 4394117462746638471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &737224406081313869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5278166820608330550, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
+    type: 3}
+  m_PrefabInstance: {fileID: 4394117462746638471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3475199312484865494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
@@ -423,6 +445,10 @@ MonoBehaviour:
   currentBattery: 0
   slowMoDuration: 15
   currentSlowMoProgress: 0
+  batteryTag: Battery
+  phoneTag: GroundPhone
+  phone: {fileID: 25498109067006341}
+  holder: {fileID: 737224406081313869}
 --- !u!4 &4283402565504716652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
