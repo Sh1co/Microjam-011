@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class BookUI : MonoBehaviour
 {
-    [SerializeField] private List<TextMeshProUGUI> pages;
+    [SerializeField] private GameObject bookHUD;
+    // [SerializeField] private List<GameObject> pages;
 
     private void Start()
     {
@@ -15,17 +14,51 @@ public class BookUI : MonoBehaviour
         {
             _gc = theObject.GetComponent<GlobalController>();
         }
+
+        pages = bookHUD.GetComponentsInChildren<TextMeshProUGUI>();
+        for (int i = 1; i < pages.Length; i++)
+        {
+            pages[i].gameObject.SetActive(false);
+        }
     }
 
     private void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.I)) return;
-        
-        _gc.gamePaused = true;
 
+        if (Input.GetKeyDown(KeyCode.I))
+        {
 
+            bookHUD.SetActive(!bookHUD.activeSelf);
+            _gc.gamePaused = !_gc.gamePaused;
+
+            if (_gc.gamePaused) Time.timeScale = 0.001f;
+            else Time.timeScale = 1;
+
+        }
+
+        if (!_gc.gamePaused) return;
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (currentPage < pages.Length - 1)
+            {
+                pages[currentPage].gameObject.SetActive(false);
+                currentPage++;
+                pages[currentPage].gameObject.SetActive(true);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (currentPage > 0)
+            {
+                pages[currentPage].gameObject.SetActive(false);
+                currentPage--;
+                pages[currentPage].gameObject.SetActive(true);
+            }
+        }
     }
 
-    private PhoneController _phone;
     private GlobalController _gc;
+    private int currentPage = 0;
+    private TextMeshProUGUI[] pages;
 }
