@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 994708797357283689}
   - component: {fileID: 4610733652146214025}
   - component: {fileID: 1180284268387107261}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,9 +168,9 @@ GameObject:
   - component: {fileID: 7605346641592901992}
   - component: {fileID: 6733163613857366209}
   - component: {fileID: 2361833753521663470}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -403,6 +403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5278166820608330550, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5278166820608330550, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -413,8 +418,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
+        type: 3}
       propertyPath: m_TagString
       value: Phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368945633792932098, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4368945633792932098, guid: dfd4ab1e5ab6f7b4d98f86dcd8bc1600,
         type: 3}
