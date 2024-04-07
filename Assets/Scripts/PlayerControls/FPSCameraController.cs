@@ -11,10 +11,18 @@ public class FPSCameraController : MonoBehaviour
     {
         // Lock the cursor to the center of the screen and hide it
         Cursor.lockState = CursorLockMode.Locked;
+        
+        GameObject theObject = GameObject.FindGameObjectWithTag("GameController");
+        if (theObject != null)
+        {
+            _gc = theObject.GetComponent<GlobalController>();
+        }
     }
 
     void Update()
     {
+        if (_gc.gamePaused) return;
+
         // Get mouse input
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -27,4 +35,6 @@ public class FPSCameraController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); // For looking up and down
         playerBody.Rotate(Vector3.up * mouseX); // For looking left and right
     }
+    
+    private GlobalController _gc;
 }

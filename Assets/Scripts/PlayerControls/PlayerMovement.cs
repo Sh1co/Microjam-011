@@ -19,10 +19,18 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _characterController = GetComponent<CharacterController>();
+        
+        GameObject theObject = GameObject.FindGameObjectWithTag("GameController");
+        if (theObject != null)
+        {
+            _gc = theObject.GetComponent<GlobalController>();
+        }
     }
 
     void Update()
     {
+        if (_gc.gamePaused) return;
+
         _isGrounded = _characterController.isGrounded;
         if (_isGrounded && _velocity.y < 0)
         {
@@ -75,4 +83,6 @@ public class PlayerMovement : MonoBehaviour
         _characterController.center = standCenter;
         _isCrouching = false;
     }
+    
+    private GlobalController _gc;
 }

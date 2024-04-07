@@ -37,6 +37,7 @@ public class PhoneController : MonoBehaviour
 
     void Update()
     {
+        if (_gc.gamePaused) return;
         if(phoneActive)
         {
             CheckMouseClick();

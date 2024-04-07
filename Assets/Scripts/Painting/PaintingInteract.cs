@@ -18,14 +18,16 @@ public class RaycastShooting : MonoBehaviour
     }
     private void Update()
     {
+        if (_gc.gamePaused) return;
+
         CheckInteract();
     }
 
     private void CheckInteract()
     {
-        if (!Input.GetKeyDown(KeyCode.E)) return;
-
         if (!_gc.slowMoActive) return;
+        
+        if (!Input.GetKeyDown(KeyCode.E)) return;
 
         var screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
 
