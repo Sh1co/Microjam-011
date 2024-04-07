@@ -24,6 +24,14 @@ public class PhoneUI : MonoBehaviour
 
     private void Update()
     {
+        if (PhoneController.phoneActive)
+        {
+            usesHUD.gameObject.SetActive(true);
+        }
+        else
+        {
+            usesHUD.gameObject.SetActive(false);
+        }
         usesHUD.text = "Phone Uses Left: " + _phone.currentBattery;
         if (_gc.slowMoActive)
         {
