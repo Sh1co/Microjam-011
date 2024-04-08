@@ -4088,6 +4088,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4180243634715378605, guid: 32f2c0e965c2c2947a27355ef1ce3ad2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -32738,7 +32743,7 @@ GameObject:
   - component: {fileID: 831290403}
   - component: {fileID: 831290402}
   - component: {fileID: 831290401}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

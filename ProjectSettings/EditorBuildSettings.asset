@@ -5,16 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Player.unity
     guid: d809292776fb99e45a7cc7c6ba7854af
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Painting.unity
     guid: f01113fcbfceb6145a7f1e157860509b
   - enabled: 1
     path: Assets/Scenes/Levels/1.Musuem.unity
     guid: 3c61b8dad2a744749ae9d536835c4359
+  - enabled: 1
+    path: Assets/Scenes/Levels/3.Musuem.unity
+    guid: f8082a5479cc3bd40b01d2b98783424b
+  - enabled: 1
+    path: Assets/Scenes/Levels/2. Adv Map.unity
+    guid: e298214c245f5ff46aacb6824ac67d5d
   m_configObjects: {}
