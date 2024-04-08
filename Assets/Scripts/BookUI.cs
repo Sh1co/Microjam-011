@@ -15,20 +15,13 @@ public class BookUI : MonoBehaviour
             _gc = theObject.GetComponent<GlobalController>();
         }
 
-        var pages1 = bookHUD.GetComponentsInChildren<RectTransform>();
-        // remove the first page, which is the book cover
-        pages = new RectTransform[pages1.Length - 1];
-        for (int i = 1; i < pages1.Length; i++)
-        {
-            pages[i - 1] = pages1[i];
-        }
+        pages = bookHUD.GetComponentsInChildren<Page>();
 
 
         for (int i = 1; i < pages.Length; i++)
         {
             pages[i].gameObject.SetActive(false);
         }
-        // bookHUD.SetActive(!bookHUD.activeSelf);
     }
 
     private void Update()
@@ -69,5 +62,5 @@ public class BookUI : MonoBehaviour
 
     private GlobalController _gc;
     private int currentPage = 0;
-    private RectTransform[] pages;
+    private Page[] pages;
 }
