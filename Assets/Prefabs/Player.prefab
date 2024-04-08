@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9480dd1027b3fe4285057448c323979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 3
   sprintSpeedMultiplier: 2
   gravity: -9.8
   jumpHeight: 2
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6465689357470342b05cccf1cf0fe0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBattery: 4
+  maxBattery: 2
   slowMoDuration: 15
   currentSlowMoProgress: 0
   batteryTag: Battery

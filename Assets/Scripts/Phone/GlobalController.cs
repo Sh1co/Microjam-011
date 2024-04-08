@@ -10,6 +10,7 @@ public class GlobalController : MonoBehaviour
     public bool gamePaused = false;
     public bool startWithPhone = false;
     public int initCharge = 0;
+    public bool loseUponEmpty = false;
 
 
     public void PlayerLost()

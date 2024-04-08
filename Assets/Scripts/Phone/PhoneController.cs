@@ -12,6 +12,7 @@ public class PhoneController : MonoBehaviour
     [SerializeField] private string phoneTag = "Phone";
     [SerializeField] private GameObject phone;
     [SerializeField] private GameObject holder;
+    [SerializeField] private AudioSource backgroundAudio;
 
     private void Start()
     {
@@ -40,6 +41,15 @@ public class PhoneController : MonoBehaviour
 
     void Update()
     {
+        if (!_gc.slowMoActive && _gc.loseUponEmpty && currentBattery == 0)
+        {
+            _gc.PlayerLost();
+        }
+
+        if (backgroundAudio != null)
+        {
+            backgroundAudio.mute = _gc.slowMoActive;
+        }
         if (_gc.gamePaused) return;
         if(phoneActive)
         {
